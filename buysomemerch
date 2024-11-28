@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+    </head>
+    <body>
+        <h1>Checkout</h1>
+        <h2>Thank you!</h2>
+
+        <!-- Link the image to open in a new tab -->
+        <a href="Square_LogoLockup_Black.png" target="_blank">
+            <img src="Square_LogoLockup_Black.png" height="100" alt="This is a Square payment logo" />
+        </a>
+    </body>
+</html>

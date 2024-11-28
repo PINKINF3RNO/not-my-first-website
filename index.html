@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="blog spot for ECP enterprises">
+    <meta name="keywords" content="merch, endless creative potential, ECP, web of friendships game, creative coding portfolio, web developer, astronomy, html/css expert, self-made">
+    <meta name="author" content="PINKINF3RNO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Not my first website. :-)</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            
+        }
+        
+        #container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        #test {
+            color: rgb(12, 2, 2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ENDLESS CREATIVE POTENTIAL</h1>
+    <hr>
+
+    <p>Finish what you start. Blart. Keep busy and happy but do not neglect your inner <i>emotional life</i>. Think. Rest. Love.</p>
+    
+   <canvas id="metatronCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('metatronCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        
+        canvas.width = width;
+        canvas.height = height;
+
+        const radiusBase = 100; // base radius of each circle
+        const numCircles = 7; // Number of circles in the flower pattern
+        const lineWidth = 2; // Line width for connecting circle centers
+
+        const centerX = width / 2;
+        const centerY = height / 2;
+
+        let time = 0;
+
+        function drawMetatronsCube() {
+            ctx.clearRect(0, 0, width, height);
+            
+            const circleCenters = [];
+
+            // Draw the base circles (Flower of Life pattern)
+            for (let i = 0; i < numCircles; i++) {
+                const angle = (i * Math.PI * 2) / numCircles; // Distribute circles evenly
+                const x = centerX + Math.cos(angle) * radiusBase * 2;
+                const y = centerY + Math.sin(angle) * radiusBase * 2;
+                
+                // Oscillating effect for circle radii
+                const radius = radiusBase + Math.sin(time + i) * 30;
+
+                // Store the center points of the circles
+                circleCenters.push({ x, y });
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = lineWidth;
+                ctx.stroke();
+            }
+
+            // Connect the circle centers to form Metatron's Cube
+            for (let i = 0; i < circleCenters.length; i++) {
+                for (let j = i + 1; j < circleCenters.length; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(circleCenters[i].x, circleCenters[i].y);
+                    ctx.lineTo(circleCenters[j].x, circleCenters[j].y);
+                    ctx.stroke();
+                }
+            }
+
+            time += 0.05; // Control the oscillation speed
+            requestAnimationFrame(drawMetatronsCube); // Animation loop
+        }
+
+        drawMetatronsCube();
+    </script>
+    <div class="container">
+        <div class="circle" style="--i:0"></div
+        <div class="circle" style="--i:1"></div
+        <div class="circle" style="--i:2"></div
+        <div class="circle" style="--i:3"></div
+        <div class="circle" style="--i:4"></div
+        <div class="circle" style="--i:5"></div
+        <div class="circle" style="--i:6"></div
+        <div class="circle" style="--i:7"></div
+        <div class="circle" style="--i:8"></div
+        <div class="circle" style="--i:9"></div
+        <div class="circle" style="--i:10"></div
+        <div class="circle" style="--i:11"></div
+        <div class="circle" style="--i:12"></div
+        <div class="circle" style="--i:13"></div
+        <div class="circle" style="--i:14"></div
+        <div class="circle" style="--i:15"></div
+        <div class="circle" style="--i:16"></div
+        <div class="circle" style="--i:17"></div
+        <div class="circle" style="--i:18"></div
+        <div class="circle" style="--i:19"></div
+        <div class="circle" style="--i:20"></div
+
+
+
+
+
+
+
+
+    <br />
+    <a href="mailto:endlesscreativepotential@gmail.com" title="What's up?">Email</a>
+
+    <h1>Visualizer</h1>
+    <div id="container"></div>
+    <hr>
+
+    <div>
+        <button onclick="init()">Init</button>
+        <button onclick="play()">Play</button>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <br />
+    <a href="buysomemerch" target="_blank" title="Checkout">
+        <img src="C:\Users\Antawn Souffrant\Desktop\my_website\images\ecpshirt.png.PNG" height="70" alt="This is a picture of the ECP merch" title="Buy some merch" />
+    </a>
+    
+    <br />
+    <audio controls autoplay src="C:\Users\Antawn Souffrant\Desktop\my_website\music\baby silk.wav"></audio>
+
+    
+    <ul>
+        <li><a href="https://t.co/nlbbB27xje" target="_blank">Book Reviews</a></li>
+        <li><a href="https://x.com/PINKINF3RNO" target="_blank" title="Ideas">X</a></li>
+        <li><a href="https://soundcloud.com/aka-africa" target="_blank" title="Listen to some tunes">Soundcloud</a></li>
+        <li><a href="https://www.twitch.tv/pinkinf3rno" target="_blank" title="Live streaming">Twitch</a></li>
+    </ul>
+    
+    <br />
+    <button onclick="changeStatus()" style="background-color: violet;">subcribe</button>
+    <p id="test">Sign the wall...</p>
+
+    <script>
+        function changeStatus(){
+            document.getElementById("test").innerHTML = "@pinkinf3rno";
+        }
+    </script>
+
+    <form action="action_page.php" method="POST">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Jesus">
+        </div>
+        <br>
+        <div>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Of Nazareth">
+        </div>
+        <br>
+    </form>
+
+    <py-script></py-script>
+    <h1>Qu'est-ce qui est en boucle?</h1>
+  <!-- Placeholder for the iframe -->
+  <div id="spotify-embed"></div>
+
+  <script>
+    // JavaScript code for dynamic iframe creation
+    const playlistId = '4cmIUsGrAZrVaPotHoo3aW'; // Your playlist ID
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Spotify Embed: Recommendation Playlist';
+    iframe.src = `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`;
+    iframe.width = '100%';
+    iframe.height = '360px'; // Match the minHeight from your original code
+    iframe.frameBorder = '0';
+    iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    iframe.loading = 'lazy';
+
+    document.getElementById('spotify-embed').appendChild(iframe);
+  </script>
+
+</body>
+</html>

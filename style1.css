@@ -1,0 +1,74 @@
+#container{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient(#a619f8, #39ace6)
+
+    
+    ;
+}
+.bar{
+    width: 10px;
+    background-color: black;
+    margin: 1px;
+
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    text-align: center;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+/* Use @font-face to load the local font */
+@font-face {
+    font-family: 'Daytona';
+    src: url("C:\Users\Antawn Souffrant\Desktop\my_website\fonts\Daytona.ttf") format('truetype');
+}
+
+/* Apply the custom font to your HTML elements */
+body {
+    font-family: 'Daytona', sans-serif;
+    font-weight: bold; /* Optional: Apply bold weight */
+    font-size: 22px;
+}
+
+h1 {
+    font-family: 'Daytona', sans-serif;
+    font-weight: bold; /* Optional: Apply bold weight */
+    font-size: 44px;
+    font-stretch: wider;
+}
+
+p {
+    font-family: 'Daytona', sans-serif;
+    font-size: 20px;
+    
+}
